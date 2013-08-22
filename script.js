@@ -5,7 +5,10 @@ jQuery(document).ready(function($) {
   success : function(parsed_json) {
   var location = parsed_json['location']['city'];
   var temp_f = parsed_json['current_observation']['temp_f'];
-  $('.weather').append("Current temperature in " + location + " is: " + temp_f);
+  var image = parsed_json['current_observation']['icon_url'];
+  $('.weather').append("Current temperature in " + location + " is: " + temp_f + " F");
+
+  $('#weather_icon').attr("src", image);
   }
   });
 });
