@@ -19,16 +19,20 @@ body {
   background: #3b3b3b;
 }
 
+.bg {
+  height:548px;width:320px;position:absolute;top:0;left:0;border-radius:5px;z-index:-1;}
+
 .container {
   width: 580px;
   margin-left: 40px;
+
 }
 
 .page {
   position: relative;
   z-index: 10;
   margin-left: 270px;
-  background: #fff;
+  background: #3b3b3b;
   width: auto;
   border-radius: 5px;
   box-shadow: -4px 0 10px -5px rgba(0, 0, 0, 0.8);
