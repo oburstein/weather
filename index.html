@@ -1,23 +1,31 @@
 <html>
-<head>
-<title>Local Weather</title>	
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<link rel="stylesheet" type="text/css" href="style.css">
-<<script type ="text/javascript" src="script.js"></script> 
-</head>
+	<head>
+  		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  		<meta name="apple-mobile-web-app-capable" content="yes"/>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script type ="text/javascript" src="javascript/script.js"></script>
 
-<body>
-<h1>Local Weather</h1>
+		<link rel="stylesheet" href="css/base.css">
+		<link rel="stylesheet" href="css/skeleton.css">
+		<link rel="stylesheet" href="css/layout.css">
+		<link rel="stylesheet" href="css/coffin.css">
+<!-- 		<link rel="stylesheet" type="text/css" href="css/style.css"> -->
+	</head>
 
-<h3 class='weather'></h3>
+	<body>
 
-<div><img id='weather_icon' src="" alt="weather icon"></div>
+		<div class="page">
+			<h1>Omer's Weather Project</h1>
 
-<h3 class='city'></h3>
+			<h3 class='weather'></h3>
 
-<p><img id="wu_logo" src="wundergroundLogo_4c_horz.jpg" alt="Weather Underground Logo" height="49" width="365"></p>
-<p id="credit_line">Weather courtesy of <a href="http://www.wunderground.com/?apiref=854dd0268629fd98">wunderground.com</a>.</p>
-</body>
+			<p><img id='weather_icon' src="" alt="weather icon"></p>
 
+			<h3 class='city'></h3>
 
+			<p><img id="wu_logo" src="images/wundergroundLogo_4c_horz.jpg" alt="Weather Underground Logo" height="49" width="365"></p>
+			<p id="credit_line">Weather courtesy of <a href="http://www.wunderground.com/?apiref=854dd0268629fd98">wunderground.com</a>.</p>
+		</div>
+		<script src="javascript/coffin.js"></script>
+	</body>
 </html> 
