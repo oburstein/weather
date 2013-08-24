@@ -20,9 +20,9 @@
   margin-right: auto;
 	}
 
-#credit_line, #credit_line.a {
+#credit_line {
 	font-size: 10;
 	color: fff;
-   	position: fixed;
-    bottom: 0px; }
+   	margin-top: 175px
+     }
 
