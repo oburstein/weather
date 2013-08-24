@@ -3,10 +3,11 @@
 	vertical-align: center }
 
 .title {
+	margin-top: 25px;
 }
 
 .city {
-	margin-top: 75px;
+	
 }	
 
 .weather {
@@ -18,11 +19,12 @@
   display: block;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 25px;
 	}
 
 #credit_line {
 	font-size: 10;
 	color: fff;
-   	margin-top: 175px
+   	margin-top: 285px
      }
 
