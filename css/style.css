@@ -1,9 +1,11 @@
-p, h1, h3 {
+.city, .weather, #weather_icon, .title {
 	text-align: center;
-	font-family: arial;
+	
 }
 
 #credit_line {
 	font-size: 10;
+	color: fff;
+	vertical-align: bottom;
 }
 
