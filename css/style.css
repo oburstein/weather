@@ -5,28 +5,31 @@
 	 }
 
 .title {
-	top: 10%;
+	position:relative;
+	top: 20px;
 }
 
 .city {
-	
+	position:relative;
+	top: 110px;
 }	
 
 .weather {
-	margin-top: 25px;
-	margin-bottom: 25px;
+	position:relative;
+	top: 75px;
 }
 
 #weather_icon {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 25px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	position:relative;
+	top: 90px;
 	}
 
 #credit_line {
 	font-size: 10;
 	color: fff;
-   	margin-top: 285px
+   	margin-top: 335px
      }
 
