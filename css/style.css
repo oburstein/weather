@@ -1,8 +1,12 @@
-.city, .weather, #weather_icon, .title, .icon {
+.city, .weather, .title, .icon {
 	text-align: center;
 	vertical-align: center;
 	text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2);
 	 }
+
+.title, .weather, .city {
+	font-family: "helvetica";
+}
 
 .title {
 	position:relative;
