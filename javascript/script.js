@@ -16,11 +16,12 @@ $(document).ready (function() {
                 //var image = parsed_json['current_observation']['icon_url'];
                 var icondesc = parsed_json['current_observation']['icon'];
                 var image = "http://icons.wxug.com/i/c/i/" + icondesc + ".gif";
-
-                $('.weather').append(temp_f + "&deg; F");
-                $('#weather_icon').attr("src", image);
+                $('.title').append("Local Weather").hide().fadeTo(1500, 1);
+                $('.weather').append(temp_f + "&deg; F").hide().fadeTo(1500, 1);
+                $('.icon').append("B").hide().fadeTo(1500, 1);
+                //$('#weather_icon').attr("src", image).hide().fadeTo(1500, 1);
                 // $('.icon_desc').append(icondesc);
-                $('.city').append(city);
+                $('.city').append(city).hide().fadeTo(1500, 1);
             }
         });
         

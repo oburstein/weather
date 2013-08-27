@@ -1,4 +1,4 @@
-.city, .weather, #weather_icon, .title {
+.city, .weather, #weather_icon, .title, .icon {
 	text-align: center;
 	vertical-align: center;
 	text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2);
@@ -7,6 +7,7 @@
 .title {
 	position:relative;
 	top: 20px;
+	display: none;
 }
 
 .city {
@@ -19,17 +20,22 @@
 	top: 75px;
 }
 
-#weather_icon {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-	position:relative;
-	top: 90px;
-	}
+.icon {
+    font-family: 'meteoconsRegular'; 
+    text-align: center; 
+    color: #181818;
+    font-size: 80px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    top: 90px;
+}
 
 #credit_line {
 	font-size: 10;
 	color: fff;
-   	margin-top: 335px
+   	margin-top: 335px;
      }
 
