@@ -10,6 +10,7 @@ $(document).ready (function() {
         $.ajax({
             url: "http://api.wunderground.com/api/dfc805df5d6fe1d4/geolookup/conditions/q/" + location + ".json",
             dataType: "jsonp",
+            timeout: 10000,
             success: function (parsed_json) {
                 var city = parsed_json.location.city;
                 var state = parsed_json.location.state;
@@ -25,7 +26,7 @@ $(document).ready (function() {
     });
 });
 
-function blockMove() {
+function lockScroll() {
   event.preventDefault() ;
 }
 
