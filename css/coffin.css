@@ -29,7 +29,8 @@ body {
 }
 
 .page {
-
+  height: 548px;
+  
   position: relative;
   z-index: 10;
   margin-left: 270px;
