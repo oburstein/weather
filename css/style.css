@@ -40,6 +40,7 @@
 #credit_line {
 	font-size: 10;
 	color: fff;
-   	margin-top: 335px;
+   	position: absolute;
+   	bottom: 0px;
      }
 
