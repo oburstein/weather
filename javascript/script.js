@@ -1,12 +1,19 @@
+var temp_f;
+var temp_c;
 
 $(document).ready (function() {
-       
-    $(".page").append('<img class="bg" src="images/sunset.jpg" alt="bg">').hide().fadeIn(1000);
+    $('#fahrenheit').click(function() {
+      $('.weather').replaceWith('<h3 class="weather">'+ temp_f +'&deg;F</h3>');
+    });
+    $('#celsius').click(function() {
+      $('.weather').replaceWith('<h3 class="weather">'+ temp_c +'&deg;C</h3>');
+    });
 
+    $(".page").append('<img class="bg" src="images/sunset.jpg" alt="bg">').hide().fadeIn(1000);
     $('.title').append("Local Weather").hide().fadeTo(1500, 1);
 
     navigator.geolocation.getCurrentPosition(function (position) {
-        var location = position.coords.latitude + ',' + position.coords.longitude;
+    var location = position.coords.latitude + ',' + position.coords.longitude;
         $.ajax({
             url: "http://api.wunderground.com/api/dfc805df5d6fe1d4/geolookup/conditions/q/" + location + ".json",
             dataType: "jsonp",
@@ -14,17 +21,21 @@ $(document).ready (function() {
             success: function (parsed_json) {
                 var city = parsed_json.location.city;
                 var state = parsed_json.location.state;
-                var temp_f = parsed_json.current_observation.temp_f;
+                temp_f = parsed_json.current_observation.temp_f;
+                temp_c = parsed_json.current_observation.temp_c;
                 var icondesc = chooseIcon(parsed_json.current_observation.icon);
 
                 $('.weather').append(temp_f +"&deg;F").hide().fadeTo(1500, 1);
                 $('.icon').append(icondesc).hide().fadeTo(1500, 1);
                 $('.city').append(city + ", " + state).hide().fadeTo(1500, 1);
             }
-        });
-        
+        }); 
     });
 });
+
+$('fahrenheit').click(function() {
+  $('weather').append('testing');
+})
 
 function lockScroll() {
   event.preventDefault() ;
