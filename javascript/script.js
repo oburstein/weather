@@ -1,9 +1,8 @@
 $(document).ready (function() {
 
-    // attempt to block scrolling up and down. may need to add this: <body ontouchmove="blockMove()">
-    function blockMove() {
-      event.preventDefault() ;
-    }
+    $(".page").append('<img class="bg" src="images/sunset.jpg" alt="bg">').hide().fadeIn(1000);
+
+    $('.title').append("Local Weather").hide().fadeTo(1500, 1);
 
     navigator.geolocation.getCurrentPosition(function (position) {
         var location = position.coords.latitude + ',' + position.coords.longitude;
@@ -16,7 +15,7 @@ $(document).ready (function() {
                 //var image = parsed_json['current_observation']['icon_url'];
                 var icondesc = parsed_json['current_observation']['icon'];
                 var image = "http://icons.wxug.com/i/c/i/" + icondesc + ".gif";
-                $('.title').append("Local Weather").hide().fadeTo(1500, 1);
+                
                 $('.weather').append(temp_f + "&deg; F").hide().fadeTo(1500, 1);
                 $('.icon').append("B").hide().fadeTo(1500, 1);
                 //$('#weather_icon').attr("src", image).hide().fadeTo(1500, 1);
