@@ -1,7 +1,7 @@
 
 $(document).ready (function() {
     //another attempt to block scroll
-    event.preventDefault() ;
+
     
     $(".page").append('<img class="bg" src="images/sunset.jpg" alt="bg">').hide().fadeIn(1000);
 
