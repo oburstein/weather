@@ -5,7 +5,7 @@
 	 }
 
 .title, .weather, .city {
-	font-family: "helvetica";
+	font-family: "helvetica neue", "helvetica";
 }
 
 .title {
