@@ -2,11 +2,16 @@ var temp_f;
 var temp_c;
 
 $(document).ready (function() {
+    $('#fahrenheit').addClass('active');
     $('#fahrenheit').click(function() {
       $('.weather').replaceWith('<h3 class="weather">'+ temp_f +'&deg;F</h3>');
+      $('#fahrenheit').addClass('active');
+      $('#celsius').removeClass('active');
     });
     $('#celsius').click(function() {
       $('.weather').replaceWith('<h3 class="weather">'+ temp_c +'&deg;C</h3>');
+      $('#celsius').addClass('active');
+      $('#fahrenheit').removeClass('active');
     });
 
     $(".page").append('<img class="bg" src="images/sunset.jpg" alt="bg">').hide().fadeIn(1000);

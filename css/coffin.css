@@ -89,6 +89,7 @@ body {
 .coffin .nav li a:hover,
 .coffin .nav li a.active {
   background: rgba(0, 0, 0, 0.1);
+  color: #FF9966;
 }
 
 /* #Tablet (Portrait)
