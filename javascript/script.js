@@ -3,11 +3,13 @@ var temp_c;
 
 $(document).ready (function() {
     $('#fahrenheit').addClass('active');
+
     $('#fahrenheit').click(function() {
       $('.weather').replaceWith('<h3 class="weather">'+ temp_f +'&deg;F</h3>');
       $('#fahrenheit').addClass('active');
       $('#celsius').removeClass('active');
     });
+    
     $('#celsius').click(function() {
       $('.weather').replaceWith('<h3 class="weather">'+ temp_c +'&deg;C</h3>');
       $('#celsius').addClass('active');
@@ -37,10 +39,6 @@ $(document).ready (function() {
         }); 
     });
 });
-
-$('fahrenheit').click(function() {
-  $('weather').append('testing');
-})
 
 function lockScroll() {
   event.preventDefault() ;
