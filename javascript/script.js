@@ -16,7 +16,7 @@ $(document).ready (function() {
         $('#fahrenheit').removeClass('active');
     });
 
-    $(".page").append('<img class="bg" src="images/sunset.jpg" alt="bg">').hide().fadeIn(1500);
+    $(".page").append('<img class="bg" src="images/sunset.jpg" alt="bg">').hide().fadeIn(1000);
     $('.title').append("Local Weather").hide().fadeTo(1500, 1);
 
     navigator.geolocation.getCurrentPosition(function(position) {
