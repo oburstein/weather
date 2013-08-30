@@ -42,17 +42,36 @@ function lockScroll() {
     event.preventDefault() ;
 }
 
+
+function isNight() {
+  var d = new Date();
+  if (d.getHours() > 18) { return true; }
+  else { return false; }
+
+}
+
 function chooseIcon(conditions) {
+    var partlycloudyIcon;
+    var clearIcon;
+    if (isNight()) { 
+      partlycloudyIcon = "I"
+      clearIcon = "C" 
+    }
+    else {
+      partlycloudyIcon = "H"
+      clearIcon ="B"
+    }
+
     switch(conditions) {
-    case 'clear':        return "B";     
+    case 'mostlycloudy': return partlycloudyIcon;      
+    case 'mostlysunny':  return partlycloudyIcon;  
+    case 'partlycloudy': return partlycloudyIcon;  
+    case 'partlysunny':  return partlycloudyIcon;
+    case 'clear':        return clearIcon;     
     case 'cloudy':       return "N";      
     case 'flurries':     return "U";      
     case 'fog':          return "L";      
     case 'hazy':         return "M";      
-    case 'mostlycloudy': return "H";      
-    case 'mostlysunny':  return "H";  
-    case 'partlycloudy': return "H";  
-    case 'partlysunny':  return "H";  
     case 'rain':         return "R";  
     case 'snow':         return "X";  
     case 'sunny':        return "B";  
