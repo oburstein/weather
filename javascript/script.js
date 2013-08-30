@@ -9,6 +9,7 @@ $(document).ready (function() {
         $('#fahrenheit').addClass('active');
         $('#celsius').removeClass('active');
     });
+
     $('#celsius').click(function() {
         $('.weather').replaceWith('<h3 class="weather">'+ temp_c +'&deg;C</h3>');
         $('#celsius').addClass('active');
@@ -42,12 +43,10 @@ function lockScroll() {
     event.preventDefault() ;
 }
 
-
 function isNight() {
   var d = new Date();
   if (d.getHours() > 18) { return true; }
   else { return false; }
-
 }
 
 function chooseIcon(conditions) {
@@ -61,7 +60,6 @@ function chooseIcon(conditions) {
       partlycloudyIcon = "H"
       clearIcon ="B"
     }
-
     switch(conditions) {
     case 'mostlycloudy': return partlycloudyIcon;      
     case 'mostlysunny':  return partlycloudyIcon;  
