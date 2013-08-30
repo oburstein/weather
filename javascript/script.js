@@ -1,7 +1,7 @@
-var temp_f;
-var temp_c;
-
 $(document).ready (function() {
+    var temp_f;
+    var temp_c;
+
     $('#fahrenheit').addClass('active');
 
     $('#fahrenheit').click(function() {
@@ -30,7 +30,6 @@ $(document).ready (function() {
                 temp_f = parsed_json.current_observation.temp_f;
                 temp_c = parsed_json.current_observation.temp_c;
                 var icondesc = chooseIcon(parsed_json.current_observation.icon);
-
                 $('.weather').append(temp_f +"&deg;F").hide().fadeTo(1500, 1);
                 $('.icon').append(icondesc).hide().fadeTo(1500, 1);
                 $('.city').append(city + ", " + state).hide().fadeTo(1500, 1);
@@ -45,46 +44,19 @@ function lockScroll() {
 
 function chooseIcon(conditions) {
     switch(conditions) {
-    case 'clear':
-      return "B";     
-      break;
-    case 'cloudy':
-      return "N";      
-      break;
-    case 'flurries':
-      return "U";      
-      break;
-    case 'fog':
-      return "L";      
-      break;
-    case 'hazy':
-      return "M";      
-      break;
-    case 'mostlycloudy':
-      return "H";      
-      break;
-    case 'mostlysunny':
-      return "H";  
-      break;
-    case 'partlycloudy': //same as mostly sunny
-      return "H";  
-      break;
-    case 'partlysunny': //same as mostly cloudy
-      return "H";  
-      break;
-    case 'rain':
-      return "R";  
-      break;
-    case 'snow':
-      return "X";  
-      break;
-    case 'sunny': //same as mostly cloudy
-      return "B";  
-      break;
-    case 'tstorms':
-      return "0";  
-      break;                        
-    default:
-      return ")";
+    case 'clear':        return "B";     
+    case 'cloudy':       return "N";      
+    case 'flurries':     return "U";      
+    case 'fog':          return "L";      
+    case 'hazy':         return "M";      
+    case 'mostlycloudy': return "H";      
+    case 'mostlysunny':  return "H";  
+    case 'partlycloudy': return "H";  
+    case 'partlysunny':  return "H";  
+    case 'rain':         return "R";  
+    case 'snow':         return "X";  
+    case 'sunny':        return "B";  
+    case 'tstorms':      return "0";                        
+    default:             return ")";
     }
 }
