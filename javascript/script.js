@@ -5,22 +5,21 @@ $(document).ready (function() {
     $('#fahrenheit').addClass('active');
 
     $('#fahrenheit').click(function() {
-      $('.weather').replaceWith('<h3 class="weather">'+ temp_f +'&deg;F</h3>');
-      $('#fahrenheit').addClass('active');
-      $('#celsius').removeClass('active');
+        $('.weather').replaceWith('<h3 class="weather">'+ temp_f +'&deg;F</h3>');
+        $('#fahrenheit').addClass('active');
+        $('#celsius').removeClass('active');
     });
-    
     $('#celsius').click(function() {
-      $('.weather').replaceWith('<h3 class="weather">'+ temp_c +'&deg;C</h3>');
-      $('#celsius').addClass('active');
-      $('#fahrenheit').removeClass('active');
+        $('.weather').replaceWith('<h3 class="weather">'+ temp_c +'&deg;C</h3>');
+        $('#celsius').addClass('active');
+        $('#fahrenheit').removeClass('active');
     });
 
-    $(".page").append('<img class="bg" src="images/sunset.jpg" alt="bg">').hide().fadeIn(1000);
+    $(".page").append('<img class="bg" src="images/sunset.jpg" alt="bg">').hide().fadeIn(1500);
     $('.title').append("Local Weather").hide().fadeTo(1500, 1);
 
-    navigator.geolocation.getCurrentPosition(function (position) {
-    var location = position.coords.latitude + ',' + position.coords.longitude;
+    navigator.geolocation.getCurrentPosition(function(position) {
+        var location = position.coords.latitude + ',' + position.coords.longitude;
         $.ajax({
             url: "http://api.wunderground.com/api/dfc805df5d6fe1d4/geolookup/conditions/q/" + location + ".json",
             dataType: "jsonp",
@@ -41,7 +40,7 @@ $(document).ready (function() {
 });
 
 function lockScroll() {
-  event.preventDefault() ;
+    event.preventDefault() ;
 }
 
 function chooseIcon(conditions) {
@@ -86,13 +85,6 @@ function chooseIcon(conditions) {
       return "0";  
       break;                        
     default:
-        return ")";
+      return ")";
     }
 }
-
-
-
-                //var image = "http://icons.wxug.com/i/c/i/" + icondesc + ".gif";
-                //$('#weather_icon').attr("src", image).hide().fadeTo(1500, 1);
-                // $('.icon_desc').append(icondesc);
-                 //var image = parsed_json['current_observation']['icon_url'];
